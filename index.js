@@ -27,9 +27,21 @@ let posts = [
   },
 ];
 
+//First api /posts this shows all the posts available!
 app.get("/posts", (req, res) => {
   res.render("index.ejs", {posts});
 });
+
+
+//let user to create new posts with the form
+app.get("/posts/new", (req,res)=>{
+    res.render("new.ejs")
+})
+app.post("/posts", (req,res)=>{
+    let {username, content} = req.body;
+    posts.push({username, content})
+    res.send("post request sent")
+})
 
 app.listen(port, () => {
   console.log("Listening to port : 8080");
