@@ -15,20 +15,20 @@ app.use(express.static(path.join(__dirname, "public")));
 let posts = [
   {
     id: uuidv4(),
-    username: "Aayush001",
-    content: "Good Morning!"
+    username: "CodeNinja42",
+    content: "Just deployed my first full-stack project! The feeling of seeing it live is incredible! 🚀"
   },
 
   {
     id: uuidv4(),
-    username: "Daabh001",
-    content: "Good Afternoon:)"
+    username: "StarGazer_99",
+    content: "Today's sunset was absolutely breathtaking. Nature's canvas never disappoints. Anyone else catch that amazing orange sky? 🌅✨"
   },
 
   {
     id: uuidv4(),
-    username: "XayzbtrX",
-    content: "Welcome to Nokia"
+    username: "WanderlustPro",
+    content: "Backpacking through Europe right now! Currently in Prague - the architecture here is mind-blowing! 🏰 Any must-visit recommendations?"
   },
 ];
 
