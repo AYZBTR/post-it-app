@@ -12,16 +12,19 @@ app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [
   {
+    id:"1a",
     username: "Aayush001",
     content: "Good Morning!"
   },
 
   {
+    id:"1b",
     username: "Daabh001",
     content: "Good Afternoon:)"
   },
 
   {
+    id:"1c",
     username: "XayzbtrX",
     content: "Welcome to Nokia"
   },
@@ -42,6 +45,14 @@ app.post("/posts", (req,res)=>{
     posts.push({username, content})
     res.redirect("/posts")
 })
+
+app.get("/posts/:id", (req,res)=>{
+  let {id}= req.params;
+  let post = posts.find((p)=> id === p.id);
+  res.render("show.ejs", {post})
+  
+})
+
 
 app.listen(port, () => {
   console.log("Listening to port : 8080");
