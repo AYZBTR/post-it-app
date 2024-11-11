@@ -47,7 +47,7 @@ app.post("/posts", (req,res)=>{
     let id = uuidv4();
     posts.push({id, username, content})
     res.redirect("/posts")
-})
+});
 
 // displaying posts of users with their id
 app.get("/posts/:id", (req,res)=>{
@@ -61,6 +61,7 @@ app.get("/posts/:id", (req,res)=>{
   
 });
 
+//UPDATE Route
 app.patch("/posts/:id", (req,res)=>{
   let {id} = req.params;
   let newContent = req.body.content; 
